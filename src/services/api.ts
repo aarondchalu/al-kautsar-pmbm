@@ -1,7 +1,7 @@
 // Service to interact with Google Apps Script Backend
 
 // To use the real backend, replace this URL with your deployed Google Apps Script Web App URL
-const GAS_WEB_APP_URL = ""; 
+const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyc-xccK5XaF8jpV4Tm2rDGMHBoYCrHSeHSjUDDEZnFIxL50WS77B-cfAIrQU0nKhc/exec"; 
 
 export interface FormField {
   id: string;
@@ -68,8 +68,8 @@ export interface AdminData extends RegistrationData {
 // Mock data for preview if GAS URL is not set
 const getInitialMockSettings = (): AppSettings => {
   const defaultSettings: AppSettings = {
-    namaSekolah: "SDN Harapan Bangsa",
-    alamat: "Jl. Pendidikan No. 123, Kota Pelajar, Indonesia 12345",
+    namaSekolah: "MTs. DDI Al-Kautsar",
+    alamat: "Jl. Imam Johan RT. 01 RW. 01 Desa Pulau Kerasian",
     telepon: "(021) 1234-5678",
     email: "info@sdnharapanbangsa.sch.id",
     deskripsi: "Mencetak generasi penerus bangsa yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan dengan pendidikan berkualitas.",
