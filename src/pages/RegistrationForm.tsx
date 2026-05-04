@@ -74,10 +74,10 @@ export default function RegistrationForm() {
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(22);
     doc.setFont("helvetica", "bold");
-    doc.text("BUKTI PENDAFTARAN PPDB", 105, 20, { align: "center" });
+    doc.text("BUKTI PENDAFTARAN PMBM", 105, 20, { align: "center" });
     doc.setFontSize(14);
     doc.setFont("helvetica", "normal");
-    doc.text(settings?.namaSekolah || "SDN Harapan Bangsa", 105, 30, { align: "center" });
+    doc.text(settings?.namaSekolah || "MTs. DDI Al-Kautsar", 105, 30, { align: "center" });
 
     // Content
     doc.setTextColor(0, 0, 0);
