@@ -19,7 +19,7 @@ export default function Footer() {
                 </div>
               )}
               <span className="font-bold text-xl tracking-tight text-white">
-                {settings?.namaSekolah || 'SDN Harapan Bangsa'}
+                {settings?.namaSekolah || 'MTs. DDI Al-Kautsar'}
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
@@ -31,7 +31,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Tautan Cepat</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="hover:text-blue-400 transition-colors">Beranda</Link></li>
-              <li><Link to="/daftar" className="hover:text-blue-400 transition-colors">Pendaftaran PBMB</Link></li>
+              <li><Link to="/daftar" className="hover:text-blue-400 transition-colors">Pendaftaran PMBM</Link></li>
               <li><Link to="/admin" className="hover:text-blue-400 transition-colors">Login Admin</Link></li>
             </ul>
           </div>
