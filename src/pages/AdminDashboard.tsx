@@ -306,7 +306,7 @@ export default function AdminDashboard() {
     doc.line(20, startY + lineHeight * 7, 190, startY + lineHeight * 7);
     doc.setFontSize(10);
     doc.setTextColor(100, 100, 100);
-    doc.text(`Kartu ini adalah bukti sah pendaftaran PMBM ${settings?.namaSekolah || 'Sekolah'}.`, 105, startY + lineHeight * 8, { align: "center" });
+    doc.text(`Kartu ini adalah bukti sah pendaftaran PMBM ${settings?.namaSekolah || 'MTs. DDI Al-Kautsar'}.`, 105, startY + lineHeight * 8, { align: "center" });
     doc.text(`Dicetak pada: ${new Date().toLocaleString()}`, 105, startY + lineHeight * 8.5, { align: "center" });
 
     // Box around everything
@@ -353,7 +353,7 @@ export default function AdminDashboard() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Dashboard Admin</h1>
-            <p className={cn("mt-1", isDarkMode ? "text-slate-400" : "text-slate-500")}>Kelola data pendaftaran PMBM {settings?.namaSekolah || 'Sekolah'}</p>
+            <p className={cn("mt-1", isDarkMode ? "text-slate-400" : "text-slate-500")}>Kelola data pendaftaran PMBM {settings?.namaSekolah || 'MTs. DDI Al-Kautsar'}</p>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -687,7 +687,7 @@ export default function AdminDashboard() {
                       <label className={cn("block text-sm font-medium mb-1", isDarkMode ? "text-slate-300" : "text-slate-700")}>Koordinat Sekolah (Latitude, Longitude)</label>
                       <input
                         type="text"
-                        value={localSettings.koordinatSekolah || ''}
+                        value={localSettings.koordinatSekolah || '-4.027008, 116.198800'}
                         onChange={e => setLocalSettings({...localSettings, koordinatSekolah: e.target.value})}
                         placeholder="Contoh: -6.200000, 106.816666"
                         className={cn("w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500", isDarkMode ? "bg-slate-900 border-slate-700 text-white" : "bg-white border-slate-300")}
