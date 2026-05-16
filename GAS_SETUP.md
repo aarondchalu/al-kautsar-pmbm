@@ -1,10 +1,10 @@
-# Panduan Pemasangan Google Apps Script (GAS) untuk PPDB Online
+# Panduan Pemasangan Google Apps Script (GAS) untuk PMBM Online
 
 Sistem PPDB Online ini menggunakan Google Apps Script dan Google Sheets sebagai backend (database). Berikut adalah langkah-langkah untuk memasangnya:
 
 ## Langkah 1: Buat Google Sheet Baru
 1. Buka [Google Sheets](https://sheets.google.com) dan buat spreadsheet baru.
-2. Beri nama spreadsheet tersebut, misalnya "Data PPDB 2024".
+2. Beri nama spreadsheet tersebut, misalnya "Data PPDB 2026".
 3. Buat 2 sheet (tab) di bagian bawah:
    - Sheet 1: Ubah namanya menjadi `Pendaftar`
    - Sheet 2: Ubah namanya menjadi `Pengaturan`
@@ -18,9 +18,9 @@ Sistem PPDB Online ini menggunakan Google Apps Script dan Google Sheets sebagai 
    - A1: `Key`
    - B1: `Value`
 6. Isi data awal di sheet `Pengaturan`:
-   - A2: `namaSekolah` | B2: `SDN Harapan Bangsa`
+   - A2: `namaSekolah` | B2: `MTs. DDI Al-Kautsar`
    - A3: `statusPendaftaran` | B3: `Buka`
-   - A4: `tahunPendaftaran` | B4: `2024`
+   - A4: `tahunPendaftaran` | B4: `2026`
    - (Tambahkan pengaturan lain sesuai kebutuhan)
 
 ## Langkah 2: Buat Google Apps Script
@@ -128,7 +128,7 @@ function doPost(e) {
     }
     
     const lastRow = sheet.getLastRow();
-    const noPendaftaran = `PPDB-${tahunPendaftaran}-${String(lastRow).padStart(3, '0')}`;
+    const noPendaftaran = `PMBM-${tahunPendaftaran}-${String(lastRow).padStart(3, '0')}`;
     
     const rowData = headers.map(header => {
       if (header === 'Timestamp') return new Date().toISOString();
